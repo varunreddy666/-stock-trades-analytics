@@ -1,14 +1,16 @@
 version: 0.2
+
 phases:
   build:
     commands:
-      - echo "Entered the build phases"
+      - echo Entered the build phases
       - cd stock-trades-analytics/
       - mvn clean package
   post_build:
     commands:
-       - echo "stock-trades application build successfully generated."
+       - echo stock-trades application build successfully generated
+       
 artifacts:
-  files:
-      - stocktrades.jar
-  discard-paths: yes
+    files:
+      - target/stocktrades.jar
+    discard-paths: yes
